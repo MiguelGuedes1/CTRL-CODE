@@ -1,0 +1,172 @@
+.backgroundImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("/src/Assets/imagemfundo2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3rem;
+
+}
+
+.titulos h1 {
+    font-size: 4rem;
+    color: white;
+    animation: pulse 2s infinite;
+    margin-left: 2rem;
+    margin-top: 0.1rem;
+}
+
+@keyframes pulse {
+    0% {
+        color: white;
+        text-shadow: 0 0 0 white;
+        /* Branco */
+    }
+
+    50% {
+        color: #ffcc00;
+        /* Amarelo (ou qualquer outra cor que você prefira) */
+        text-shadow: 0 0 10px #ffcc00;
+        /* Sombra amarela (ou qualquer outra cor que você preferir) */
+    }
+
+    100% {
+        color: white;
+        text-shadow: 0 0 0 white;
+        /* Branco */
+    }
+}
+
+.titulos h2 {
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin-left: 8.5rem;
+}
+
+.titulos h2::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffcc00;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.titulos h2:hover::before {
+    transform: scaleX(1);
+}
+
+.botao_share_knowledge {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #333333;
+    background-color: #aaa;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 19.5rem;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.botao_share_knowledge:hover {
+    background-color: #333333;
+    color: #f5f5f5;
+}
+
+.botao_share_knowledge:active {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+
+
+
+
+
+/* media queries */
+
+@media screen and (max-width: 870px) {
+    .titulos h1 {
+        font-size: 2.6rem;
+    }
+
+    .titulos h2 {
+        font-size: 1.3rem;
+
+    }
+
+    .botao_share_knowledge {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        color: #333333;
+        background-color: #aaa;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-left: 12.5rem;
+        cursor: pointer;
+        margin-top: 3rem;
+    }
+
+
+
+}
+
+@media screen and (max-width: 580px) {
+    .titulos h1 {
+        font-size: 1.4rem;
+    }
+
+    .titulos h2 {
+        font-size: 0.7rem;
+        margin-left: 3.5rem;
+
+    }
+
+    .botao_share_knowledge {
+        display: inline-block;
+        padding: 5px 5px;
+        font-size: 0.8rem;
+        color: #333333;
+        background-color: #aaa;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-left: 6.5rem;
+        cursor: pointer;
+        margin-top: 1.6rem;
+    }
+
+
+
+}

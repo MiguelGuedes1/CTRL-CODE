@@ -48,7 +48,7 @@ useEffect(()=>{
       <div className="container">
         <Routes>
             <Route
-                path='/'
+                path='/'                                                          
                  element={user ? <Home/> : <Navigate to="/Register" />}
             ></Route>
 
